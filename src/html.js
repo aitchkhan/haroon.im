@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/html-has-lang */
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export default function HTML({
   htmlAttributes,
   headComponents,
@@ -26,6 +26,16 @@ export default function HTML({
         <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
       </body>
+      <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
+<script
+  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script>
+
+<script
+  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin></script>
+
     </html>
   );
 }

@@ -1,0 +1,32 @@
+.sec1{
+    padding-bottom: 4rem !important;
+    background-image: url('../../images/overlay.svg') !important;
+    background-size: contain !important;
+    background-position: right top !important;
+    background-repeat: no-repeat !important;
+}
+.h-images{
+    width: 500px;
+    margin-left: 50px;
+}
+.h-images2{
+    width: 500px;
+    margin-left: 150px;
+    margin-top: -100px;
+}
+.titles{
+    font-size: 40px !important;
+    width: 500px;
+    text-align: left;
+    margin-bottom: 0px !important;
+}
+.titles2{
+    font-size: 40px !important;
+    width: 500px;
+    text-align: left;
+    margin-bottom: 3rem !important;
+    font-weight: 500 !important;
+}
+.about-img{
+    width: -webkit-fill-available !important;
+}

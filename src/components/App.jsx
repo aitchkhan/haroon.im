@@ -4,7 +4,8 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-
+import Services from './Services/Services';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
@@ -28,6 +29,7 @@ function App() {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
+      <Services/>
       <Projects />
       <Contact />
       <Footer />
