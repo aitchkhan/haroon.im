@@ -6,6 +6,7 @@ import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import Title from "../components/Title"
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 // ...GatsbyImageSharpFluid
 const query = graphql`
   {
@@ -78,6 +79,7 @@ const ProjectsPage = () => {
     </div>
     
   </section>
+  <Footer/>
   </>
   )
   

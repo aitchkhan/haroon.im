@@ -7,6 +7,8 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 export default () => {
   
   return (
@@ -15,6 +17,8 @@ export default () => {
       <Services />
       <Jobs/>
       <Projects titles="featured projects" showLink/>
+      <Blogs/>
+      <Footer/>
     </Layout>
   )
 }
