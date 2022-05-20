@@ -1,22 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import App from '../components/App';
-import { headData } from '../mock/data';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/main.scss';
+import * as React from "react"
+import LandingBio from "../components/landing-bio"
 
-export default () => {
-  const { title, lang, description } = headData;
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import * as styles from "../components/index.module.css"
 
-  return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{title || 'Gatsby Simplefolio'}</title>
-        <html lang={lang || 'en'} />
-        <meta name="description" content={description || 'Gatsby Simplefolio'} />
-      </Helmet>
-      <App />
-    </>
-  );
-};
+const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+
+const IndexPage = () => (
+  <Layout>
+    <Seo title="Home" />
+    <div className={styles.textCenter}>
+      <LandingBio />
+      
+    </div>
+  </Layout>
+)
+
+export default IndexPage
