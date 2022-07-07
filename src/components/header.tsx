@@ -3,13 +3,17 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const SiteHeader = styled.header`
+const SiteHeader = styled.nav`
   background: transparent;
   display: flex;
   align-content: center;
   justify-content: center;
 `
-
+const Content = styled.div`
+  max-width: 860px;
+  padding: 1rem 1.0875rem;
+  font-size: 1.2rem;
+`
 const NavLink = styled(Link)`
   color: black;
   margin-left: 15px;
@@ -42,17 +46,10 @@ const HomeLink = styled(NavLink)`
 
 const Header = ({ siteTitle }) => (
   <SiteHeader>
-    <header
-      style={{
-        margin: `0 auto`,
-        padding: `var(--space-4) var(--size-gutter)`,
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: `space-between`,
-      }}
-    >
+    <Content>
       <HomeLink to="/">{siteTitle}</HomeLink>
-    </header>
+      <NavLink to="/about">About</NavLink>
+    </Content>
   </SiteHeader>
 )
 
