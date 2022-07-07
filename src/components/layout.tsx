@@ -12,6 +12,15 @@ import "@fontsource/nunito"
 
 import Header from "./header"
 import "./layout.css"
+import styled from "styled-components"
+
+const GatsbyLink = styled.a`
+  margin-left: 5px;
+`
+const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,16 +44,11 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+          </Footer>
       </div>
     </>
   )
