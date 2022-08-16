@@ -20,7 +20,7 @@ const GatsbyLink = styled.a`
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
-`
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

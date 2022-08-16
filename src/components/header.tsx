@@ -48,10 +48,10 @@ const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
       <HomeLink to="/">{siteTitle}</HomeLink>
-      <NavLink to="/about">About</NavLink>
+      <NavLink to="/blog">Blog</NavLink>
     </Content>
   </SiteHeader>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
