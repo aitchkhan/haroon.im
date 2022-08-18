@@ -2,18 +2,19 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import ThemeToggle from './theme';
 
 const SiteHeader = styled.nav`
   background: transparent;
   display: flex;
   align-content: center;
   justify-content: center;
-`
+`;
 const Content = styled.div`
   max-width: 860px;
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
-`
+`;
 const NavLink = styled(Link)`
   color: black;
   margin-left: 15px;
@@ -22,7 +23,7 @@ const NavLink = styled(Link)`
   position: relative;
 
   ::after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -38,17 +39,18 @@ const NavLink = styled(Link)`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-`
+`;
 
 const HomeLink = styled(NavLink)`
   margin-left: 0;
-`
+`;
 
 const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
       <HomeLink to="/">{siteTitle}</HomeLink>
       <NavLink to="/blog">Blog</NavLink>
+      <ThemeToggle />
     </Content>
   </SiteHeader>
 );
