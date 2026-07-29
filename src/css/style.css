@@ -1,0 +1,155 @@
+:root {
+  --paper: #f3efe6;
+  --ink: #2b2621;
+  --ink-soft: #5c5348;
+  --rule: #d8d0c0;
+  --accent: #8a5a34;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+header.site {
+  margin-bottom: 2.5rem;
+}
+
+header.site a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+header.site h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+header.site p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+  line-height: 1.25;
+}
+
+p, ul, ol {
+  margin: 0 0 1.25em;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.post-list li:first-child {
+  border-top: none;
+}
+
+.post-list a {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 1.15rem;
+}
+
+.post-list time {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+article.post header {
+  margin-bottom: 2rem;
+}
+
+article.post time {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1c1a17;
+    --ink: #e8e2d5;
+    --ink-soft: #a89e8d;
+    --rule: #3a352c;
+    --accent: #c98d5a;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper: #1c1a17;
+  --ink: #e8e2d5;
+  --ink-soft: #a89e8d;
+  --rule: #3a352c;
+  --accent: #c98d5a;
+}
+
+:root[data-theme="light"] {
+  --paper: #f3efe6;
+  --ink: #2b2621;
+  --ink-soft: #5c5348;
+  --rule: #d8d0c0;
+  --accent: #8a5a34;
+}
