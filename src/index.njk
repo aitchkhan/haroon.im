@@ -2,8 +2,16 @@
 title: Haroon
 layout: base.njk
 ---
+<section class="intro">
+  <p>Over the last decade, my career has evolved from being a software engineer to leading engineering teams and running a business. I love understanding real-world business problems and use technology to solve these problems.</p>
+  <p>For the last five years, I've operated as an entrepreneurial leader, working right alongside developers, DevOps engineers, and clients to turn ideas into scalable products. Whether it's architecting a massive serverless system, building computer vision platforms, or deploying voice AI agents, my focus is building smart, economically viable solutions that drive real business value.</p>
+</section>
+
+<hr>
+
+<h2>Latest</h2>
 <ul class="post-list">
-  {%- for post in collections.posts | reverse %}
+  {%- for post in collections.posts | reverse | limit(5) %}
   <li>
     <a href="{{ post.url }}">{{ post.data.title }}</a>
     <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>

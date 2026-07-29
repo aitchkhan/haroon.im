@@ -1,0 +1,14 @@
+---
+title: Technical | Haroon
+layout: base.njk
+permalink: /technical/
+---
+<h1>Technical</h1>
+<ul class="post-list">
+  {%- for post in collections.technical | reverse %}
+  <li>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+  {%- endfor %}
+</ul>

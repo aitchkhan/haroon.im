@@ -31,11 +31,21 @@ A personal blog to write down everything — thoughts, notes, whatever comes up.
 
 ### Free hosting
 
-Cloudflare Pages, Netlify, Vercel, or GitHub Pages — any of these auto-deploy from a git repo on push.
+**Decision: Vercel.** (Note: repo currently also has a GitHub Pages Actions workflow at `.github/workflows/deploy.yml` from an earlier pass — needs to be swapped out for Vercel, or removed if deploying via Vercel's own Git integration instead of Actions.)
+
+## Site Structure
+
+- **Homepage** (`src/index.njk`) — intro/bio + latest 5 posts across both sections
+- **Two content sections**, tag-driven, with nav in the header:
+  - **Personal** (`/personal/`) — posts tagged `personal`
+  - **Technical** (`/technical/`) — posts tagged `technical`
+- Posts live in `src/posts/*.md`, tagged `posts` plus one of `personal` / `technical`
 
 ## Next Steps
 
 - [x] Decide: Astro vs. Eleventy → **Eleventy**
 - [x] Scaffold starter project with a paperwhite theme
-- [ ] Pick a hosting provider and connect repo for auto-deploy
-- [ ] Write first post
+- [x] Pick a hosting provider → **Vercel**
+- [x] Homepage + Personal/Technical nav
+- [ ] Connect repo to Vercel and remove/replace the GitHub Pages workflow
+- [ ] Write first real posts (personal + technical)

@@ -13,6 +13,16 @@ export default function (eleventyConfig) {
     new Date(date).toISOString().slice(0, 10)
   );
 
+  eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));
+
+  eleventyConfig.addCollection("personal", (api) =>
+    api.getFilteredByTag("personal")
+  );
+
+  eleventyConfig.addCollection("technical", (api) =>
+    api.getFilteredByTag("technical")
+  );
+
   return {
     dir: {
       input: "src",
